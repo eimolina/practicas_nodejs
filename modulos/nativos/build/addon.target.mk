@@ -9,8 +9,10 @@ DEFS_Debug := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
+	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-D__STDC_FORMAT_MACROS' \
 	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION' \
@@ -36,16 +38,16 @@ CFLAGS_C_Debug :=
 CFLAGS_CC_Debug := \
 	-fno-rtti \
 	-fno-exceptions \
-	-std=gnu++1y
+	-std=gnu++14
 
 INCS_Debug := \
-	-I/home/carlos/.cache/node-gyp/12.11.1/include/node \
-	-I/home/carlos/.cache/node-gyp/12.11.1/src \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/openssl/config \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/openssl/openssl/include \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/uv/include \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/zlib \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/v8/include
+	-I/home/isaac/.cache/node-gyp/16.13.1/include/node \
+	-I/home/isaac/.cache/node-gyp/16.13.1/src \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/openssl/config \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/openssl/openssl/include \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/uv/include \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/zlib \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/v8/include
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=addon' \
@@ -54,8 +56,10 @@ DEFS_Release := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
+	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-D__STDC_FORMAT_MACROS' \
 	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION'
@@ -78,16 +82,16 @@ CFLAGS_C_Release :=
 CFLAGS_CC_Release := \
 	-fno-rtti \
 	-fno-exceptions \
-	-std=gnu++1y
+	-std=gnu++14
 
 INCS_Release := \
-	-I/home/carlos/.cache/node-gyp/12.11.1/include/node \
-	-I/home/carlos/.cache/node-gyp/12.11.1/src \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/openssl/config \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/openssl/openssl/include \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/uv/include \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/zlib \
-	-I/home/carlos/.cache/node-gyp/12.11.1/deps/v8/include
+	-I/home/isaac/.cache/node-gyp/16.13.1/include/node \
+	-I/home/isaac/.cache/node-gyp/16.13.1/src \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/openssl/config \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/openssl/openssl/include \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/uv/include \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/zlib \
+	-I/home/isaac/.cache/node-gyp/16.13.1/deps/v8/include
 
 OBJS := \
 	$(obj).target/$(TARGET)/hola.o
