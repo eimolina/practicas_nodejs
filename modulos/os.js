@@ -1,26 +1,36 @@
 const os = require('os');
 
-// console.log(os.arch());
-// console.log(os.platform());
+// imprime la arquitectura de la computadora x86 x64
+console.log(os.arch());
 
-// console.log(os.cpus().length);
+// imprime la plataforma (freBSD, OpenBSD, windows, linux, MacOS)
+console.log(os.platform());
 
-// console.log(os.constants);
+// imprime iformacion de cores disponibles
+console.log(os.cpus());
+
+// cantidad de cores
+console.log(os.cpus().length);
+
+// informacion de las señales y prioridad de sistemas
+console.log(os.constants);
 
 const SIZE = 1024;
 function kb(bytes) { return bytes / SIZE }
 function mb(bytes) { return kb(bytes) / SIZE }
 function gb(bytes) { return mb(bytes) / SIZE }
 
-// console.log(os.freemem());
-// console.log(kb(os.freemem()));
-// console.log(mb(os.freemem()));
-// console.log(gb(os.freemem()));
 
-// console.log(gb(os.totalmem()));
+console.log("BYTES: ", os.freemem());
+console.log("KILOBYTES: ", kb(os.freemem()));
+console.log("MEGABYTES: ", mb(os.freemem()));
+console.log("GIGABYTES: ", gb(os.freemem()));
 
-// console.log(os.homedir())
-// console.log(os.tmpdir())
+console.log("TOTAL MEM: ", gb(os.totalmem()));
 
-// console.log(os.hostname());
-console.log(os.networkInterfaces());
+//DIRECTORIO RAIZ DEL USUARIO
+console.log("DIRECTORIO RAIZ:", os.homedir())
+console.log("DIRECTORIO TEMPORAL:", os.tmpdir())
+
+console.log("NOMBRE DE LA MAQUINA:", os.hostname());
+console.log("INTERFACES DE RED:", os.networkInterfaces());
