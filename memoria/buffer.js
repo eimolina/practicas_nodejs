@@ -1,5 +1,10 @@
 // let buffer = Buffer.alloc(4);
 // let buffer = Buffer.from([1, 2, 5]);
+
+
+// Creo que es importante destacar que el buffer no almacena 
+// los datos en binario, ya que cada espacio 
+// tiene 2 dígitos (almacenamiento hexadecimal).
 let buffer = Buffer.from('Hola');
 
 // console.log(buffer);
